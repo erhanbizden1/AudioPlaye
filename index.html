@@ -7,9 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Audio Playe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <audio id="myAudio">
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     <div class="container">
         <div class="player-wrapper">
             <div class="title-and-remind-contain">
@@ -17,10 +25,38 @@
                     <div class="songer-neme">Lil Bitch</div>
                     <div class="song-name">“something casual af!”</div>
                 </div>
-                <div class="player-remind">asdasdas</div>
+                <div class="player-remind">
+                    <div class="reminds">
+                        <div class="ellipses-remind">
+                            <img src="assets/icons/remind.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="minds">
+                        <div class="ellipses-remind">
+                            <img src="assets/icons/mind.svg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="player-action">
+                <div class="play-pause">
+                    <div class="ellipse" onclick="playAudio();">
+                    <img src="assets/icons/play-icon.svg" alt="">
+                    </div>
+                </div>
+                <div class="audio-bar">
+                    <div class="audio-progress">
+                        progress
+                    </div>
+                    <div class="audio-timer">
+                        01:10 / 04:12
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>
