@@ -1,0 +1,27 @@
+.container{
+   width: 100%;
+   position: relative;
+   .player-wrapper{
+        margin: 0 auto;
+        margin-top: 100px;
+        width: 700px;
+        
+        background-color: white;
+        border:1px solid #F8DCFF;
+        border-radius: 24px;
+        padding: 30px;
+   }
+   .title-and-remind-contain{
+       display: flex;
+       justify-content: space-between;
+   }
+   .songer-neme{
+       color: #A11BC2;
+       font-weight: 700;
+       font-size: 14px;
+   }
+   .song-name{
+       color: #501BC2;
+       font-size: 24px;
+   }
+}
