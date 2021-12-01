@@ -3,14 +3,15 @@ body {
 }
 .container {
   width: 100%;
-  position: relative;
   .player-wrapper {
-    margin: 0 auto;
-    margin-top: 100px;
     width: 600px;
     background-color: white;
     border: 3px solid #f8dcff;
-    border-radius: 24px;
+    border-radius: 40px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     padding: 30px;
     .title-and-remind-contain {
       display: flex;
@@ -18,6 +19,11 @@ body {
       align-items: center;
       .player-remind {
         display: flex;
+      }
+      .reminds {
+        .ellipses-remind {
+          transform: rotate(180deg);
+        }
       }
       .reminds,
       .minds {
@@ -28,7 +34,12 @@ body {
           background-color: #fdf3ff;
           margin-left: 10px;
           position: relative;
+          transition: 0.5s;
 
+          &:hover {
+            background: #f8dcff;
+            cursor: pointer;
+          }
           img {
             position: absolute;
             top: 50%;
@@ -46,6 +57,7 @@ body {
       margin-top: 20px;
       .play-pause {
         .ellipse {
+          cursor: pointer;
           width: 80px;
           height: 80px;
           background-color: #fdf3ff;
@@ -58,10 +70,12 @@ body {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            width: 25px;
           }
         }
       }
       .audio-bar {
+        position: relative;
         width: 100%;
         height: 80px;
         border-radius: 40px;
@@ -69,15 +83,41 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        .vector-canvas {
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+          z-index: 0;
+          left: 15px;
         
-        .audio-progress{
-            margin-left: 30px;
+          img{
+            width: 345px;
+            margin-top: 10px;
+            opacity: 0.1;
+          }
         }
-        .audio-timer{
-            margin-right: 27px;
-            font-size: 16px;
-            color: #A11BC2;
-       
+        .progress-container {
+          z-index: 9;
+          background: #f3e6f6;
+          border-radius: 24px;
+          cursor: pointer;
+          border: 3px solid white;
+          margin: 10px 30px;
+          height: 10px;
+          width: 100%;
+        }
+        .progress {
+          background-color: #cb6ce2;
+          height: 100%;
+          width: 0%;
+          border-radius: 24px;
+          transition: width 0.1s linear;
+        }
+        .audio-timer {
+          font-size: 16px;
+          color: #a11bc2;
+          width: 40%;
         }
       }
     }

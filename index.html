@@ -8,18 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Audio Playe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <audio id="myAudio">
-        <source src="horse.ogg" type="audio/ogg">
-        <source src="horse.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+
     <div class="container">
         <div class="player-wrapper">
+            <span id="set-audio"></span>
             <div class="title-and-remind-contain">
                 <div class="song-end-songer">
                     <div class="songer-neme">Lil Bitch</div>
@@ -28,7 +25,7 @@
                 <div class="player-remind">
                     <div class="reminds">
                         <div class="ellipses-remind">
-                            <img src="assets/icons/remind.svg" alt="">
+                            <img src="assets/icons/mind.svg" alt="">
                         </div>
                     </div>
                     <div class="minds">
@@ -40,22 +37,26 @@
             </div>
             <div class="player-action">
                 <div class="play-pause">
-                    <div class="ellipse" onclick="playAudio();">
-                    <img src="assets/icons/play-icon.svg" alt="">
+                    <div class="ellipse">
+                        <img src="assets/icons/play-icon.svg" alt="">
                     </div>
                 </div>
                 <div class="audio-bar">
-                    <div class="audio-progress">
-                        progress
+                    <div class="vector-canvas">
+                        <img src="assets/icons/vector.svg" alt="">
+                    </div>
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress" id="progress"></div>
                     </div>
                     <div class="audio-timer">
-                        01:10 / 04:12
+                       <span id="currentTime"></span><span> / </span><span id="duration"></span>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
+
     <script src="assets/js/app.js"></script>
 </body>
 
